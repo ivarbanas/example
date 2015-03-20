@@ -1,0 +1,26 @@
+$pink: #d55457;
+$redBackground: rgba(213, 84, 87, 0.9); 
+
+@mixin clear{
+  clear: both;
+}
+
+// code
+
+#footer {
+  @include clear;
+  color:white;
+  height: 200px;
+  background: $pink;
+  background: $redBackground; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+
+  p.lorem {
+    margin: 42px 0;
+    text-align: left; 
+    float:left;}
+  p.copy {
+    text-align: right; }
+}

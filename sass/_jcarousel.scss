@@ -1,0 +1,104 @@
+$black: #333333;
+$white: #fff;
+$silver: #eaeaea;
+$pink: #d55457;
+$redBackground: rgba(213, 84, 87, 0.9); 
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+       -o-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($left, $top, $blur, $color) {
+  -webkit-box-shadow: $left $top $blur $color;
+     -moz-box-shadow: $left $top $blur $color;
+       -o-box-shadow: $left $top $blur $color;
+      -ms-box-shadow: $left $top $blur $color;
+          box-shadow: $left $top $blur $color;
+}
+
+
+/* Carousel - slider */
+
+
+.jcarousel-wrapper {
+  position: relative; }
+
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; 
+  ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+  li {
+    width: 200px;
+    float: left; }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto !important; }
+}
+
+
+/* Carousel Pagination - bellow slider */
+
+.jcarousel-pagination {
+  text-align: center;
+  margin: 20px auto; 
+  a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    height: 14px;
+    width: 14px;
+    line-height: 10px;
+    background: none repeat scroll 0% 0% $white;
+    color: $black;
+    @include border-radius(10px);
+    @include box-shadow(0, 0, 1px, $silver);
+    text-indent: -9999px;
+    margin-right: 20px;
+  }
+  a.active {
+    background: $pink;
+    color: $white;
+    opacity: 1;
+    @include box-shadow(0, 0, 1px, $white);
+  }
+}
+
+.carouselContainer {
+  color: $white;
+  text-align: left;
+  margin: 30px 30px 30px 0;
+  float: left;
+  width: 844px;
+  height: 492px;
+  border-bottom: 1px solid $silver; 
+  img {
+    @include border-radius(2px);
+    max-height: 437px; }
+  .slideContainer {
+    position: absolute;
+    top: 300px; }
+  .slideTitle {
+    background: $redBackground;
+    padding: 20px 20px;
+    margin: 12px 0px;
+    width: 804px;
+    height: 100px; }
+  a {
+    color: $white;
+    font-size: 35px; 
+    &:hover {
+      color: $black; }
+  }
+}

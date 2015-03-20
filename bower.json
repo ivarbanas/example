@@ -1,0 +1,28 @@
+{
+  "name": "Example",
+  "version": "0.1.0",
+  "authors": [
+    "Ivica Arbanas <arbanas.ivica@gmail.com>"
+  ],
+  "description": "Task for work",
+  "main": "index.php",
+  "license": "MIT",
+  "homepage": "www.arbanasivica.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "magnific-popup": "~1.0.0",
+    "slidebars": "~0.10.2",
+    "jcarousel": "~0.3.3"
+  },
+  "keywords": [
+    "task",
+    "work"
+  ]
+}

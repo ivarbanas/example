@@ -1,0 +1,81 @@
+$white: #fff;								               // white color
+$redBackground: rgba(213, 84, 87, 0.9);	    // red background opacity 90%
+$fontSize: 14px;							             // primary value
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+#search-text {
+  @include placeholder {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+
+// code
+
+#pictureHeader {
+  background: url("../img/pozadinaLogo.jpg");
+  background-size: cover; }
+
+#containerHeader {
+  padding: 38px 0 162px 0;
+  background: $redBackground; }
+
+#logo {
+  color: $white;
+  font-size: $fontSize*9; }
+
+#search-box{
+  float:right;
+}
+
+#search-box input[type="text"] {
+  padding: 11px 0;
+  width: 565px;
+}
+
+#search-text {
+  background: none repeat scroll 0 0 transparent;
+  border-width: 0;
+  color: $white;
+  font-size: $fontSize; }
+
+#search-form {
+  height: 40px;
+  box-shadow: 0 1px 0 0 $white;
+  margin: 40px 0;
+  overflow: hidden; }
+
+.searchIcon {
+  color: $white;
+  font-size: $fontSize + 6; }
+
+.clearButton{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  float:right;
+}

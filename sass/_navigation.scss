@@ -1,0 +1,40 @@
+$font: "Lato", sans-serif;
+$white: #fff;
+$pink: #D55457;
+$dark: #666666;
+
+
+// code
+
+#nav {
+  background-color: $white;
+  height: 70px;
+  width: 100%; 
+  .rightNav {
+    float: right;
+    padding: 16px 0; }
+  .signInIcon {
+    color: $pink;
+    font-size: 26px;
+    margin: 20px 4px 20px 0; }
+  ul {
+    margin: 0;
+    padding: 0px 0px;
+    list-style: none;
+    }
+  li {
+    display: inline;
+    padding: 25px 80px 25px 0; 
+  }
+  a {
+    text-decoration: none;
+    color: $dark;
+    padding: 23px 0; 
+    &:hover {
+    border-bottom: 2px solid $pink;
+    color: $pink; }
+  }
+#logoMobile{
+    display:none;
+}
+}
